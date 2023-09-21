@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>STARVE - PERFIL</title>
+  </head>
+  <body onload ="carregaUserPerfil()"></body>
+    <header id="header">
+      <a id="logo-link" href="indexv2.html"><img id="logo-img" src="Imagens/starve-vet.png" width="280px" height="70px"></a>
+      <nav id="nav">
+          <button id="btn-mobile">Menu
+              <span id="hamburguer"></span>
+          </button>
+          <ul id="menu">
+              <li><a id="admin-nav-button" href="admin.html">ADMIN</a></li>
+              <li><a id="perfil-nav-button" href="perfil.html">Meu Perfil</a></li>
+              <li><a id="historico-nav-button" href="historico.html">Histórico de pedidos</a></li>
+              <li><a id="faq-nav-button" href="indexv2.html #faq">FAQ</a></li>
+              <li><a id="sair-nav-button" onclick="signOut()" href="signinv2.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="perfil" class="section">
+        <form id="form-perfil" class="unsolid-box-signup">
+          <div class="form-header">
+            <h7>1. Dados pessoais</h7>
+          </div>
+          <div id="form-inputs-dados-pessoais" class="form-inputs">
+              <div class="form-inputs-left">
+                  <div id="input-username" class="form-inputs-control">
+                      <label for="usernameperfil">Username</label>
+                      <input
+                      type="text"
+                      id="usernameperfil"
+                      placeholder="Digite o seu nome de usuário"
+                      class="input"                      
+                      />
+                      <i>
+                      <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                      </i>
+                      <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                      </i>
+                      <small></small>
+                  </div>
+                  <div id="input-email" class="form-inputs-control">
+                      <label for="emailperfil">E-mail</label>
+                      <input 
+                      type="text" 
+                      id="emailperfil" 
+                      placeholder="Digite o seu e-mail" />
+                      <i>
+                      <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                      </i>
+                      <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                      </i>
+                      <small></small>
+                      <small></small>
+                  </div>
+                  <div id="input-password" class="form-inputs-control">
+                      <label for="passwordperfil">Senha</label>
+                      <input
+                      type="password"
+                      id="passwordperfil"
+                      placeholder="Digite a sua senha"
+                      />
+                      <i>
+                      <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                      </i>
+                      <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                      </i>
+                      <small></small>
+                  </div>
+                  <div id="input-password-confirmation" class="form-inputs-control">
+                      <label for="passwordconfirmationperfil">Confirmação de senha</label>
+                      <input
+                      type="password"
+                      id="passwordconfirmationperfil"
+                      placeholder="Confirme a senha"
+                      />
+                      <i>
+                      <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                      </i>
+                      <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                      </i>
+                      <small></small>
+                  </div>
+              </div>
+              <div class="form-inputs-right">
+                  <div id="inputnomecompleto" class="form-inputs-control">
+                  <label for="nomecompletoperfil">Nome completo</label>
+                  <input
+                      type="text"
+                      id="nomecompletoperfil"
+                      placeholder="Digite o seu nome completo"
+                  />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                  </div>
+                  <div id="inputcpf" class="form-inputs-control">
+                  <label for="cpfperfil">CPF</label>
+                  <input
+                      type="text"
+                      id="cpfperfil"
+                      placeholder="Digite o seu CPF"
+                  />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                  </div>
+                  <div id="input-nascimento" class="form-inputs-control">
+                  <label for="nascimentoperfil">Data de nascimento</label>
+                  <input
+                      type="date"
+                      id="nascimentoperfil"
+                      placeholder="Digite a sua data de nascimento"
+                  />
+                  <small></small>
+                  <small></small>
+                  </div>
+                  <div id="input-phone-number" class="form-inputs-control">
+                  <label for="phonenumberperfil">Telefone</label>
+                  <input
+                      type="tel"
+                      id="phonenumberperfil"
+                      placeholder="Digite o seu telefone"
+                  />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                  </div>
+              </div>
+          </div>
+          <div id="form-subtitle-2" class="form-header">
+            <h8>2. Indicação</h8>
+          </div>
+          <div id="form-inputs-dados-indicação" class="form-inputs">
+            <div class="form-inputs-left">
+                <div id="input-nome-indicacao-1" class="form-inputs-control">
+                    <label for="indica1perfil">Nome</label>
+                    <input
+                    type="text"
+                    id="indica1perfil"
+                    placeholder="Digite o nome da indicação 1"
+                    />
+                    <i>
+                    <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                    </i>
+                    <i><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </svg>
+                    </i>
+                    <small></small>
+                </div>
+                <div id="input-telefone-indicacao-1" class="form-inputs-control">
+                  <label for="indica1phoneperfil">Telefone</label>
+                  <input
+                      type="text"
+                      id="indica1phoneperfil"
+                      placeholder="Digite o telefone"
+                  />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i>
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                </div>
+            </div>
+            <div class="form-inputs-right">
+                <div id="input-nome-indicacao-2" class="form-inputs-control">
+                  <label for="indica2perfil">Nome</label>
+                  <input 
+                  type="text" 
+                  id="indica2perfil"
+                  placeholder="Digite o nome da indicação 2" />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i>
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                </div>
+                <div id="input-telefone-indicacao-2" class="form-inputs-control">
+                  <label for="indica2phoneperfil">Telefone</label>
+                  <input
+                    type="text"
+                    id="indica2phoneperfil"
+                    placeholder="Digite o telefone"
+                  />
+                  <i>
+                  <svg class="denied-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                  </i>
+                  <i>
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+                  </i>
+                  <small></small>
+                </div>
+            </div>
+          </div>
+          <button type="submit" id="btn-editar" onclick="editar()">EDITAR</button>
+          <button type= "submit" id="btn-salvar" onclick="salvar()">SALVAR</button>
+          <button type= "submit" id="btn-excluir" onclick="excluir()">EXCLUIR</button>
+        </form>
+      </section>
+      <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>STARVE - CARRINHO</title>
+  </head>
+  <body onload ="carregaUser()">
+    <header id="header">
+      <a id="logo-link" href="indexv2.html"><img id="logo-img" src="Imagens/starve-vet.png" width="280px" height="70px"></a>
+      <nav id="nav">
+          <button id="btn-mobile">Menu
+              <span id="hamburguer"></span>
+          </button>
+          <ul id="menu">
+              <li><a id="signup-nav-button" href="signup.html">Sign up</a></li>
+              <li><a id="perfil-nav-button" href="perfil.html">Meu Perfil</a></li>
+              <li><a id="sobre-nav-button" href="indexv2.html #sobre">Sobre</a></li>
+              <li><a id="produtos-nav-button" href="indexv2.html #produtos">Produtos</a></li>
+              <li><a id="faq-nav-button" href="indexv2.html #faq">FAQ</a></li>
+              <li><a id="signinv2-nav-button" href="signinv2.html">Sign in</a></li>
+              <li><a id="sair-nav-button" onclick="signOut()" href="signinv2.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="pedido">
+      <div id="pedido-sugestoes" class="cards">
+        <div class="pedido-sugestoes-label">
+          <h5>1. SUGESTÕES</h5>
+        </div>
+        <div class="pedido-sugestoes-cards">
+          <div id="card-pepperoni" class="cards-carrinho-pepperoni">
+            <div id="label-pepperoni" class="labels-carrinho">
+              <h7 class="h7">PEPPERONI</h7>
+              <div class="pizza-detalhes">
+                <label>Tamanho: M</label>
+                <label>Borda: Cheddar</label>
+                <label>Preço: R$36,90</label>
+              </div>              
+            </div>
+            <div id="icon-pepperoni" class="icons-carrinho-pepperoni">
+              <div id="card-quadrado-pepperoni" class="card-branco-quadrado-pepperoni">
+                <a onclick= "changeColorCardPizza('pepperoni')" class="icon-pizza"><img src="Imagens/ícones btn pizza/slct/nobg-pepperoni-pizza-icon.png" width="100%" height="100%" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div id="card-veggie" class="cards-carrinho-veggie">
+            <div id="label-veggie" class="labels-carrinho">
+              <h7 class="h7">VEGGIE</h7>
+              <div class="pizza-detalhes">
+                <label>Tamanho: M</label>
+                <label>Borda: Pesto</label>
+                <label>Preço: R$34,90</label>
+              </div>    
+            </div>
+            <div id="icon-veggie" class="icons-carrinho-veggie">
+              <div id="card-quadrado-veggie" class="card-branco-quadrado-veggie">
+                <a onclick="changeColorCardPizza('veggie')" class="icon-pizza"><img src="Imagens/ícones btn pizza/slct/nobg-veggie-pizza-icon.png" width="100%" height="100%" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div id="card-queijo" class="cards-carrinho-queijo">
+            <div id="label-queijo" class="labels-carrinho">
+              <h7 class="h7">QUEIJO</h7>
+              <div class="pizza-detalhes">
+                <label>Tamanho: M</label>
+                <label>Borda: Catupiry</label>
+                <label>Preço: R$32,90</label>
+              </div>    
+            </div>
+            <div id="icon-queijo" class="icons-carrinho-queijo">
+              <div id="card-quadrado-queijo" class="card-branco-quadrado-queijo">
+                <a class="icon-pizza" onclick="changeColorCardPizza('queijo')"><img src="Imagens/ícones btn pizza/slct/nobg-cheese-pizza-icon.png" width="100%" height="100%" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="button-carrinho" class="button">
+        <button disabled="true" id="button-carrinho-pedido" class="button-pedido" onclick="confirmaPedido()">PEDIR</button>
+      </div>
+      <!-- <div id="pedido-form" class="">
+        <div class="pedido-form-label">
+          <h5>2. PEDIDO</h5>
+        </div>
+        <div class="pedido-form-form">
+          <div class="unsolid-box-pedido">
+            <div class="unsolid-box-pedido-esq">
+              <label class="label-pedido">SABORES</label>
+              <select id="option-sabores" class="input-pedido">            
+              <option value=""></option>
+              <option id="optionqueijo">Queijo</option>
+              <option id="optionveggie">Veggie</option>
+              <option id="optionpepperoni">Pepperoni</option>            
+              </select>
+              <label class="label-pedido">TAMANHO</label>
+              <select id="option-tamanhos" class="input-pedido">
+              <option value=""></option>
+              <option id="option-tamanhopequena">P - 4 fatias</option>
+              <option id="option-tamanhomedia">M - 6 fatias</option>
+              <option id="option-tamanhogrande">G - 8 fatias</option>
+              <option id="option-tamanhogigante">F - 12 fatias</option>
+              </select>
+              <label class="label-pedido">BORDA</label>
+                <select id="option-bordas" class="input-pedido">   
+                <option value=""></option>         
+                <option id="optionsem">Sem borda</option>
+                <option id="optionrequeijao">Requeijão + R$5,00</option>
+                <option id="optioncheddar">Cheddar + R$5,00</option>
+                <option id="optioncatupiry">Catupiry + R$5,00</option>
+                <option id="optionchocolate">Chocolate + R$7,00</option>    
+              </select>
+            </div>
+            <div class="unsolid-box-pedido-dir">
+              <h1>ENTREGA</h1>
+              <label for="delivery-adress">Endereço</label>
+              <input type="text" name="" id="delivery-adress">
+            </div>            
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>STARVE.COM - SIGNIN</title>
+</head>
+<body onload ="carregaUser()">
+    <header id="header">
+      <a id="logo-link" href="indexv2.html"><img id="logo-img" src="Imagens/starve-vet.png" width="280px" height="70px"></a>
+      <nav id="nav">
+          <button id="btn-mobile">Menu
+              <span id="hamburguer"></span>
+          </button>
+          <ul id="menu">
+            <li><a id="admin-nav-button" href="admin.html">ADMIN</a></li>
+              <li><a id="signup-nav-button" href="signup.html">Sign up</a></li>
+              <li><a id="signinv2-nav-button" href="signinv2.html">Sign in</a></li>
+              <div id="perfil-nav-button"><li>
+                <a href="perfil.html">Meu Perfil</a>
+              </li>
+              </div>
+              <li><a id="sobre-nav-button" href="indexv2.html #sobre">Sobre</a></li>
+              <li><a id="produtos-nav-button" href="indexv2.html #produtos">Produtos</a></li>
+              <li><a id="faq-nav-button" href="indexv2.html #faq">FAQ</a></li>              
+              <li><a id="sair-nav-button" onclick="signOut()" href="signinv2.html">Sair</a></li>
+          </ul>
+        </nav>
+     </header>
+    <div id="formSignIn" class="section">
+      <div id="form-sign-in" class="unsolid-box-signin">
+          <div id="label-signin">
+              <Label>Sign In</Label>
+          </div>
+          <div id="inputs-signin">
+              <div id="input-username" class="form-inputs-control">
+                  <input
+                  id="inputs-signin-username"
+                  class="input1" 
+                  type="text" 
+                  placeholder="Usuário" 
+                  style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                  </input>
+                  <small></small>
+              </div>
+              <div id="input-password" class="form-inputs-control">
+                  <input 
+                  id="inputs-signin-password"
+                  class="input1" 
+                  type="password" 
+                  placeholder="Senha" 
+                  style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                  </input>
+                  <small></small>
+              </div>                
+              <span class="hyperlink-signin"><a href="">Esqueceu a senha?</a></span> 
+          </div>     
+          <div id="button-signin">
+              <button onclick="LOGAR()"><span class="button-sign-in-font">Sign In</span></button>
+              <label class="ou">ou</label>
+              <span><a href="" class="hyperlink-signin"><img src="Svgs/google.svg" width="32px" height="32px"></a></span>
+              <span><a href="" class="hyperlink-signin"><img src="Svgs/facebook.svg" width="32px" height="32px"></a></span>
+              <span><a href="" class="hyperlink-signin"><img src="Svgs/apple.svg" width="32px" height="32px"></a></span>
+          </div>   
+          <div id="label-signin-2">                
+              <Label>Não possui cadastro?</Label>&nbsp;&nbsp;<span class="hyperlink-signin"><a href="signup.html">Sign Up</a></span>
+          </div>
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>

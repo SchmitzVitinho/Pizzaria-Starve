@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>STARVE - HISTÓRICO DE PEDIDOS</title>
+  </head>
+  <body onload ="carregaUser()"></body>
+    <header id="header">
+        <a id="logo-link" href="indexv2.html"><img id="logo-img" src="Imagens/starve-vet.png" width="280px" height="70px"></a>
+        <nav id="nav">
+            <button id="btn-mobile">Menu
+            <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a id="usernamelist-nav-button">USERNAMELIST</a></li>
+                <li><a id="historico-nav-button">HISTÓRICO</a></li>
+                <li><a id="admin-nav-button" href="admin.html">ADMIN</a></li>
+                <li><a id="signup-nav-button" href="signup.html">Sign up</a></li>
+                <li><a id="signinv2-nav-button" href="signinv2.html">Sign in</a></li>
+                <li><a id="sair-nav-button" onclick="signOut()" href="signinv2.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="admin" class="section">
+            <button type="submit" id="btn-editar" onclick="">PESQUISAR</button>
+            <button type="submit" id="btn-editar" onclick="">PESQUISAR</button>
+            <button type= "submit" id="btn-salvar" onclick="">EXCLUIR</button>
+        </div>
+      </section>
+      <script src="script.js"></script>
+  </body>
+</html>

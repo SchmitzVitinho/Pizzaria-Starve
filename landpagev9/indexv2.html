@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>STARVE - HOME</title>
+</head>
+<body onload ="carregaUser()">
+    <header id="header">
+        <a id="logo-link" href="indexv2.html"><img id="logo-img" src="Imagens/starve-vet.png" width="280px" height="70px"></a>
+        <nav id="nav">
+            <button id="btn-mobile">Menu
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">   
+                <li><a id="admin-nav-button" href="admin.html">ADMIN</a></li>             
+                <div >
+                    <li>
+                    <a id="signup-nav-button" href="signup.html">Sign up</a>
+                    </li>
+                </div>
+                <div id="signinv2-nav-button"><li>
+                    <a href="signinv2.html">Sign in</a>
+                    </li>
+                </div>
+                <div id="perfil-nav-button"><li>
+                    <a href="perfil.html">Meu Perfil</a>
+                </li>
+                </div>
+                <li><div id="sobre-nav-button"><a href="indexv2.html #sobre">Sobre</a>
+                </div></li>
+                <li><div id="produtos-nav-button"><a href="indexv2.html #produtos">Produtos</a>
+                </div></li>
+                <li><div id="faq-nav-button"><a href="indexv2.html #faq">FAQ</a>
+                </div></li>
+                <li><a id="sair-nav-button" onclick="signOut()" href="signinv2.html">Sair</a></li>
+              </ul>
+        </nav>
+    </header>
+    <section id="main-banner" class="section">          
+      <div class="unsolid-box">
+        <div id="unsolid-box-left" class="div1">
+            <div class="text-one">
+                    <h1 class="h1">Pensou em Pizza?</h1>
+                    <h2 class="h2">Peça agora!</h2>
+            </div>
+            <div class="input-and-button">
+                <input 
+                id = "enderecopedido"
+                class="input1" type="text" 
+                placeholder="   Digite o endereço de entrega" 
+                style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                </input>
+                <button 
+                class="btn-pedido"
+                onclick="moveToCarrinho()">Pedido
+                </button>
+            </div>
+        </div>            
+        <div id="unsolid-box-right" class="div2">
+            <div id="svg-column">
+                <span><img src="Svgs/award.svg" alt="Bootstrap-icon" width="32" height="32"></span>
+                <span><img src="Svgs/card-list.svg" alt="Bootstrap-icon" width="32" height="32"></span>                
+                <span><img src="Svgs/tomato.png" alt="Bootstrap-icon" width="32" height="32"></span>
+                <span><img src="Svgs/truck.svg" alt="Bootstrap-icon" width="32" height="32"></span>
+            </div>
+            <div id="label-column">
+                <label>Eleita a melhor pizzaria virtual</label>
+                <label>Receitas clássicas e exclusivas</label>
+                <label>A melhor seleção de ingredientes</label>
+                <label>A qualquer hora e em qualquer lugar</label>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section id="sobre" class="section">
+        <div class="sobre-empresa">            
+            <div id="sobre-empresa-esq">
+                <h3>EMPRESA</h3>
+                <label>Starve.com, sua pizzaria delivery de excelência! Estamos aqui para satisfazer seus desejos por pizza com nossos três sabores especiais: Queijo, Vegana e Pepperoni. Nosso compromisso é oferecer uma experiência única, com ingredientes de alta qualidade e receitas perfeitas que vão encantar o seu paladar. Acreditamos que a qualidade é essencial para uma pizza deliciosa. Por isso, selecionamos cuidadosamente os melhores ingredientes, desde a massa fresca até os toppings saborosos, garantindo que cada pizza seja uma obra-prima de sabor e textura. Nossos pizzaiolos talentosos dominam a arte de criar pizzas perfeitas e estão empenhados em surpreendê-lo(a) a cada mordida. No Starve.com, acreditamos que a pizza não é apenas uma refeição, mas uma experiência completa. Nossa equipe dedicada se esforça para fornecer um atendimento excepcional, desde o momento em que você faz o seu pedido até a entrega na sua porta. Queremos que cada momento seja especial e que você aproveite ao máximo cada fatia da sua pizza favorita.</label>
+            </div> 
+            <div id="sobre-empresa-dir">
+                <div class="unsolid-card">
+                    <img src="Imagens/pizza_assistant_upscaled2.png" height="85%"width="85%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="produtos" class="section">
+        <div class="produtos-background">
+            <div id="cardapio">
+                <h4>CARDÁPIO</h4>                
+            </div>            
+            <div id="cardapio-queijo">
+                <div class="texto-queijo">
+                    <h5>QUEIJO</h5>
+                    <label id="receita-queijo-1" class="receita">Nossa pizza de Queijo é um clássico atemporal. Utilizamos uma combinação cuidadosa de queijos selecionados e derretidos sobre uma massa fresca e crocante. Cada mordida é uma explosão de sabor e prazer. Experimente a pizza que traz o verdadeiro conforto da comida caseira.</label>
+                    <div class="label-split">
+                        <label id="receita-queijo-2" class="receita">Ingredientes: Queijo mussarela, queijo cheddar, queijo parmesão.</label>
+                        <label id="receita-queijo-3" class="receita">Massa: Massa fresca e crocante.</label>
+                        <label id="receita-queijo-4" class="receita">Tamanho: P, M, G.</label>
+                        <label id="receita-queijo-5" class="receita">Opções de Personalização: Adicionar tomate, manjericão fresco, azeitonas pretas.</label>
+                        <label id="receita-queijo-6" class="receita">Preço: A partir de R$ 24,90.</label>
+                    </div>
+                </div>
+                <div id="img-pizza-queijo" class="imgs-cardapio">
+                    <img src="Imagens/menu-cheese-pizza.jpg" width="85%" height="85%">    
+                </div>
+            </div>
+            <div id="cardapio-veggie">
+                <div id="img-pizza-veggie" class="imgs-cardapio">
+                    <img src="Imagens/menu-veggie-pizza.jpg" width="85%" height="85%">  
+                </div>
+                <div class="texto-veggie">
+                    <h5>VEGGIE</h5>
+                    <label id="receita-veggie-1" class="receita">Pizza Vegana:
+                    Para os nossos clientes que preferem uma opção vegana, temos a incrível Pizza Vegana. Preparamos uma massa especial vegana, leve e crocante, e a cobrimos com ingredientes frescos e saborosos. Nossa pizza vegana é uma opção deliciosa para todos os amantes de pizza que desejam uma opção livre de produtos de origem animal.</label>
+
+                    <div class="label-split">
+                        <label id="receita-veggie-2" class="receita">Ingredientes: Queijo vegano, molho de tomate, cogumelos, pimentões, cebola roxa.</label>
+                        <label id="receita-veggie-3" class="receita">Massa: Massa vegana leve e crocante.</label>
+                        <label id="receita-veggie-4" class="receita">Tamanho: P, M, G.</label>
+                        <label id="receita-veggie-5" class="receita">Opções de Personalização: Adicionar tomate cereja, espinafre, azeitonas verdes.</label>
+                        <label id="receita-veggie-6" class="receita">Preço: A partir de R$ 28,90.</label>
+                    </div>
+                </div>
+            </div>
+            <div id="cardapio-pepperoni">
+                <div class="texto-pepperoni">
+                    <h5>PEPPERONI</h5>
+                    <label id="receita-pepperoni-1" class="receita">Pizza de Pepperoni:
+                    Se você está em busca de uma explosão de sabor, nossa Pizza de Pepperoni é perfeita para você. Nossa receita exclusiva combina fatias suculentas de pepperoni com queijo derretido sobre uma massa fina e crocante. Cada pedaço é uma experiência inesquecível para os amantes de sabores intensos.</label>
+                    <div class="label-split">
+                        <label id="receita-pepperoni-2" class="receita">Ingredientes: Queijo mussarela, pepperoni fatiado, molho de tomate.</label>
+                        <label id="receita-pepperoni-3" class="receita">Massa: Massa fina e crocante.</label>
+                        <label id="receita-pepperoni-4" class="receita">Tamanho: P, M, G.</label>
+                        <label id="receita-pepperoni-5" class="receita">Opções de Personalização: Adicionar cebola caramelizada, pimenta jalapeño, azeitonas pretas.</label>
+                        <label id="receita-pepperoni-6" class="receita">Preço: A partir de R$ 26,90.</label>
+                </div>
+            </div> 
+            <div id="img-pizza-pepperoni" class="imgs-cardapio">
+                <img src="Imagens/menu-pizza-pepperoni(2).jpg" width="85%" height="85%" alt="">
+            </div>     
+        </div>
+    </section>
+    <section id="faq" class="section">
+        <div class="faq-li">
+            <h6>FAQ</h6>
+            <label for="">Aqui estão algumas perguntas frequentes sobre o Starve.com e nossos serviços de entrega:</label>
+            <ol id="ol-div">
+                <li>Quais são os sabores de pizza disponíveis no Starve.com?
+                    Oferecemos três sabores irresistíveis: Queijo, Vegana e Pepperoni. Cada sabor é preparado com ingredientes de alta qualidade e receitas exclusivas para garantir uma experiência deliciosa. Temos opções para todos os gostos!
+                </li>
+                <li>Qual é a área de entrega do Starve.com?
+                    Estamos orgulhosos em oferecer entrega em sua região. Verifique se o seu endereço está dentro da nossa área de cobertura ao fazer o seu pedido. Caso você esteja fora da nossa área de entrega, recomendamos que entre em contato conosco para verificar se podemos acomodar o seu pedido.
+                </li>
+                <li>Como faço para fazer um pedido online no Starve.com?
+                    Fazer um pedido online é rápido e fácil. Basta acessar nosso website, explorar o nosso cardápio com os sabores disponíveis, selecionar as pizzas desejadas e adicioná-las ao carrinho. Depois, você preenche as informações de entrega, escolhe a forma de pagamento e finaliza o pedido. Pronto! Agora é só aguardar a sua pizza ser preparada e entregue fresquinha na sua porta.
+                </li>
+                <li>Quanto tempo leva para a entrega da minha pizza?
+                    Nosso objetivo é entregar sua pizza o mais rápido possível. O tempo de entrega pode variar dependendo da demanda e da distância entre a pizzaria e o seu endereço. Faremos o possível para que sua pizza chegue quentinha e deliciosa dentro de um prazo razoável. Durante o processo de pedido, você receberá uma estimativa de tempo de entrega para sua referência.
+                </li>
+                <li>Posso personalizar minha pizza ou adicionar ingredientes adicionais?
+                    No momento, nosso cardápio está focado nos três sabores principais: Queijo, Vegana e Pepperoni. Cada sabor já é cuidadosamente preparado com os melhores ingredientes para oferecer a melhor experiência possível. No entanto, oferecemos algumas opções de personalização, como adicionar ingredientes extras dentro das opções disponíveis para cada sabor. Durante o processo de pedido, você poderá ver as opções de personalização disponíveis para cada pizza.
+                </li>
+            </ol>            
+        </div>        
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
